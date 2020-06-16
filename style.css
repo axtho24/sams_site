@@ -1,0 +1,132 @@
+body {
+  background: #edf6f9;
+  font-family: 'Dosis', serif;
+}
+
+strong {
+  font-weight: bolder !important;
+}
+
+.row {
+  margin-bottom: 0px !important;
+}
+
+.homes ul {
+  margin: 25% 0;
+}
+
+.homes li {
+  margin: 15% 0;
+}
+
+.card .card-image .card-title {
+  top: 0 !important;
+}
+
+.collapsible {
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+  margin: 0 !important;
+}
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.collapsible-header {
+  background-color: #edf6f9 !important;
+  border-bottom: 1px solid #000 !important;
+}
+
+/************** NAVIGATION STYLING **************/
+
+.logo {
+  max-width: 50% !important;
+}
+
+a {
+  color: black !important;
+  font-size: large;
+}
+
+a:hover {
+  color: #235789 !important;
+  cursor: pointer !important;
+  text-decoration: underline;
+}
+
+.currentLink {
+  color: #235789 !important;
+  cursor: pointer !important;
+  text-decoration: underline;
+}
+
+/************** NAVIGATION STYLING **************/
+
+/************** CONTAINERS **************/
+.homes, .about_me, .portfolio_cont, .arts_cont {
+  text-align: center;
+}
+
+.titles {
+  margin: 3% 0;
+}
+
+.about_me, .portfolio_cont, .arts_cont {
+  display: none;
+}
+
+/************** CONTAINERS **************/
+
+/************** PORTFOLIO **************/
+.draping:hover, .milenery:hover, .first_hand:hover, .crafts:hover, .goBack, .portfolio_cont img, .arts_cont img {
+  cursor: pointer !important;
+}
+
+.draping:hover span, .milenery:hover span, .first_hand:hover span, .crafts:hover span {
+  text-decoration: underline !important;
+}
+/************** PORTFOLIO **************/
+
+.collapsible li.active i {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+.s5ths,
+.m5ths,
+.l5ths,
+.xl5ths {
+  margin-left: auto !important;
+  left: auto !important;
+  right: auto !important;
+}
+
+.row .col.s5ths {
+  width: 20%;
+}
+
+@media only screen and (min-width: 601px) {
+  .row .col.m5ths {
+    width: 20% !important;
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .row .col.l5ths {
+    width: 20% !important;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .row .col.xl5ths {
+    width: 20% !important;
+  }
+}
+
+.draping_projects p {
+  font-size: 20px !important;
+}

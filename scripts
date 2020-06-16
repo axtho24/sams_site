@@ -1,0 +1,203 @@
+$(document).ready(function(){
+  window.location.hash = "#home"
+
+  $('.navMenu').hide();
+
+//////////////// PAGE/TAB NAVIGATION ////////////////
+  $('.home').click(function() {
+    $('.about').removeClass('currentLink')
+    $('.portfolio').removeClass('currentLink')
+    $('.arts').removeClass('currentLink')
+
+    $('.homes').show();
+    $('.navMenu').hide();
+    $('.about_me').hide();
+    $('.portfolio_cont').hide();
+    $('.arts_cont').hide();
+  })
+
+  $('.about').click(function() {
+    $('.about').addClass('currentLink')
+    $('.portfolio').removeClass('currentLink')
+    $('.arts').removeClass('currentLink')
+
+    $('.homes').hide();
+    $('.navMenu').show();
+    $('.about_me').show();
+    $('.portfolio_cont').hide();
+    $('.arts_cont').hide();
+  })
+
+  $('.portfolio').click(function() {
+    $('.about').removeClass('currentLink')
+    $('.portfolio').addClass('currentLink')
+    $('.arts').removeClass('currentLink')
+
+    $('.homes').hide();
+    $('.navMenu').show();
+    $('.about_me').hide();
+    $('.portfolio_cont').show();
+    $('.arts_cont').hide();
+
+    $('.project_links').show();
+    $('.draping_projects').hide();
+    $('.first_hand_projects').hide();
+    $('.millinery_projects').hide();
+    $('.crafts_projects').hide();
+    $('.tailoring_projects').hide();
+  })
+
+  $('.arts').click(function() {
+    $('.about').removeClass('currentLink')
+    $('.portfolio').removeClass('currentLink')
+    $('.arts').addClass('currentLink')
+
+    $('.homes').hide();
+    $('.navMenu').show();
+    $('.about_me').hide();
+    $('.portfolio_cont').hide();
+    $('.arts_cont').show();
+  })
+
+  $('.draping').click(function() {
+    $('.about_me').hide();
+    $('.portfolio_cont').show();
+    $('.arts_cont').hide();
+    $('.draping_projects').show();
+    $('.project_links').hide();
+    $('.millinery_projects').hide();
+    $('.first_hand_projects').hide();
+    $('.crafts_projects').hide();
+    $('.tailoring_projects').hide();
+  })
+
+  $('.millinery').click(function() {
+    $('.about_me').hide();
+    $('.portfolio_cont').show();
+    $('.arts_cont').hide();
+    $('.project_links').hide();
+    $('.draping_projects').hide();
+    $('.millinery_projects').show();
+    $('.first_hand_projects').hide();
+    $('.crafts_projects').hide();
+    $('.tailoring_projects').hide();
+  })
+
+  $('.first_hand').click(function() {
+    $('.about_me').hide();
+    $('.portfolio_cont').show();
+    $('.arts_cont').hide();
+    $('.project_links').hide();
+    $('.draping_projects').hide();
+    $('.millinery_projects').hide();
+    $('.first_hand_projects').show();
+    $('.crafts_projects').hide();
+    $('.tailoring_projects').hide();
+  })
+
+  $('.crafts').click(function() {
+    $('.about_me').hide();
+    $('.portfolio_cont').show();
+    $('.arts_cont').hide();
+    $('.project_links').hide();
+    $('.draping_projects').hide();
+    $('.millinery_projects').hide();
+    $('.first_hand_projects').hide();
+    $('.crafts_projects').show();
+    $('.tailoring_projects').hide();
+  })
+
+  $('.tailoring').click(function() {
+    $('.about_me').hide();
+    $('.portfolio_cont').show();
+    $('.arts_cont').hide();
+    $('.project_links').hide();
+    $('.draping_projects').hide();
+    $('.millinery_projects').hide();
+    $('.first_hand_projects').hide();
+    $('.crafts_projects').hide();
+    $('.tailoring_projects').show();
+  })
+
+  $('.goBack').click(function() {
+    window.location.hash = "#portfolio";
+  })
+//////////////// PAGE/TAB NAVIGATION ////////////////
+
+
+//////////////// GALLERY VIEWER ////////////////
+  $('#dress_proc').lightGallery({
+    selector: '.dress_proc'
+  })
+
+  $('#flamingo').lightGallery({
+    selector: '.flamingo'
+  })
+
+  $('#s_and_s').lightGallery({
+    selector: '.s_and_s'
+  })
+
+  $('#spring_a').lightGallery({
+    selector: '.spring_a'
+  })
+
+  $('#bonnet').lightGallery({
+    selector: '.bonnet'
+  })
+
+  $('#women_of').lightGallery({
+    selector: '.women_of'
+  })
+
+  $('#colorado').lightGallery({
+    selector: '.colorado'
+  })
+
+  $('#ut_first').lightGallery({
+    selector: '.ut_first'
+  })
+
+  $('#orlShake').lightGallery({
+    selector: '.orlShake'
+  })
+
+  $('#duck').lightGallery({
+    selector: '.duck'
+  })
+
+  $('#kubo').lightGallery({
+    selector: '.kubo'
+  })
+
+  $('#silkPaint').lightGallery({
+    selector: '.silkPaint'
+  })
+
+  $('#art_draws').lightGallery({
+    selector: '.art_draws'
+  })
+
+  $('#suit').lightGallery({
+    selector: '.suit'
+  })
+  //////////////// GALLERY VIEWER ////////////////
+
+  $('.draping_items').collapsible();
+
+  $('.milenery_items').collapsible();
+
+  $('.first_hand_items').collapsible();
+
+  $('.crafts_items').collapsible();
+
+  $('.tailoring_items').collapsible();
+
+////////////////////////BACK BUTTON FUNCTION ////////////////
+  window.onhashchange = function() {
+   var hashName = (window.location.hash).replace(/#/, " ").replace(/\//, " ").split(" ").slice(-1)[0];
+     console.log(hashName)
+   $('.' + hashName + '').trigger("click");
+  }
+  ////////////////////////BACK BUTTON FUNCTION ////////////////
+});
